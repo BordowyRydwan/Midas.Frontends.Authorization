@@ -1,8 +1,13 @@
-version: '3.3'
+version: '3.5'
 
 services:
-  angular-docker:
-    container_name: auth-container
+  frontend:
+    container_name: authorization_frontend
     build: .
     ports:
       - '4002:80'
+
+networks:
+  default:
+    name: midas
+    external: true
